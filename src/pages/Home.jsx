@@ -3,6 +3,7 @@ import Layout from '../components/Layout.jsx'
 import PageMeta from '../components/PageMeta.jsx'
 import MatchCard from '../components/MatchCard.jsx'
 import GutterAds from '../components/GutterAds.jsx'
+import AdUnit from '../components/AdUnit.jsx'
 import { loadMatches, FOOT_ORIGIN } from '../lib/matches.js'
 
 function injectSiteNavigationSchema(todayMatches) {
@@ -119,6 +120,11 @@ export default function Home() {
           </p>
         </section>
 
+        <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
+          <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
+          <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
+        </div>
+
         <div className="main-wrapper">
           <div className="flex justify-center items-center gap-2 mb-6 pb-4 border-b border-gray-200 dark:border-gray-700">
             {TABS.map((t) => (
@@ -141,6 +147,11 @@ export default function Home() {
               visible.map((m) => <MatchCard key={m.id} match={m} onOpen={handleOpen} />)
             )}
           </div>
+        </div>
+
+        <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
+          <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
+          <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
         </div>
 
         <section className="mt-10 bg-white dark:bg-slate-900/50 border border-gray-200 dark:border-slate-800 rounded-2xl p-5 md:p-7 shadow-sm" aria-labelledby="how-to-stream">
