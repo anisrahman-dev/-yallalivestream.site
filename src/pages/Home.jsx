@@ -120,7 +120,9 @@ export default function Home() {
           </p>
         </section>
 
-        <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
+        <div className="grid grid-cols-2 gap-4 justify-items-center mb-8">
+          <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
+          <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
           <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
           <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
         </div>
@@ -149,7 +151,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
+        <div className="grid grid-cols-2 gap-4 justify-items-center mt-8">
+          <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
+          <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
           <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
           <AdUnit adKey="0d95f3cc5d513c86c4303b542e9c3a68" width={320} height={50} showLabel={false} />
         </div>
