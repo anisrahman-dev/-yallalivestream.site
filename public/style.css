@@ -1,0 +1,268 @@
+/* ── DESIGN SYSTEM & THEME TOKENS ── */
+:root {
+  --bg-color: #f3f4f6;
+  --text-color: #1f2937;
+  --text-muted: #4b5563;
+  --header-bg: #ffffff;
+  --header-border: #e5e7eb;
+  --container-bg: #ffffff;
+  --card-bg: #f9fafb;
+  --card-border: #e5e7eb;
+  --card-footer-bg: #f3f4f6;
+  --badge-bg: #1e293b;
+  --badge-text: #ffffff;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --green-bg: #d4edda;
+  --green-text: #155724;
+}
+
+html.dark {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --text-muted: #94a3b8;
+  --header-bg: #1e293b;
+  --header-border: #334155;
+  --container-bg: #1e293b;
+  --card-bg: #0f172a;
+  --card-border: #334155;
+  --card-footer-bg: #1e293b;
+  --badge-bg: #334155;
+  --badge-text: #f8fafc;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --green-bg: #14532d;
+  --green-text: #dcfce7;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: 'Sora', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background-color: var(--header-bg);
+  border-color: var(--header-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.live-pulse { animation: pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+@keyframes pulse-ring { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+/* Premium bouncy elastic spring transition curve for popups */
+.bouncy-pop {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease-out;
+}
+
+.header-icon-btn {
+  width: 34px;
+  height: 34px;
+  min-height: 34px !important;
+  max-height: 34px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #ffffff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  font-size: 18px;
+}
+.header-icon-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.btn-theme { background-color: #374151; }
+.btn-calendar { background-color: #e53e3e; }
+.btn-fb { background-color: #3b5998; }
+.btn-twitter { background-color: #1da1f2; }
+
+/* ── MOBILE TOUCH TARGETS ── */
+button, a { min-height: 40px; display: inline-flex; align-items: center; }
+nav a { justify-content: center; }
+
+/* ── SCROLLABLE LEAGUE PILLS ── */
+.league-scroll { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; -ms-overflow-style: none; }
+.league-scroll::-webkit-scrollbar { display: none; }
+.league-pill { white-space: nowrap; flex-shrink: 0; }
+
+/* ── MAIN CONTENT CONTAINER ── */
+.main-wrapper {
+  background-color: var(--container-bg);
+  border: 1px solid var(--header-border);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+/* ── MATCH TABS ── */
+.tab-tomorrow { background-color: #c59b27; color: #ffffff; }
+.tab-tomorrow:hover { background-color: #b0871e; }
+.tab-today { background-color: #8b0000; color: #ffffff; }
+.tab-today:hover { background-color: #720000; }
+.tab-yesterday { background-color: #104e8b; color: #ffffff; }
+.tab-yesterday:hover { background-color: #0d3d6e; }
+.tab-important { 
+  background-color: #f97316; 
+  color: #ffffff; 
+  border: 1px solid #f97316;
+  transition: all 0.2s ease;
+}
+.tab-important:hover { 
+  background-color: #ea580c; 
+  border-color: #2dd4bf;
+}
+
+/* ── CUSTOM MATCH CARD DESIGN ── */
+.custom-match-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.custom-match-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.team-logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.dark .team-logo-img {
+  background-color: #f8fafc;
+  border-radius: 6px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+/* Ad slots must stay fully hidden when SITE_CONFIG.adsEnabled is false.
+   The Tailwind responsive `flex` / `min-[1360px]:flex` classes have the
+   same specificity as the user-agent `[hidden]` rule and would otherwise
+   override it. This rule ensures the placeholder boxes never render
+   until the activation script removes the `hidden` attribute. */
+[data-ad-slot][hidden] {
+  display: none !important;
+}
+
+.match-info-badge {
+  background-color: rgba(45, 212, 191, 0.12);
+  color: #f97316;
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Card details grid */
+.card-details-grid {
+  display: grid;
+  grid-template-cols: 1fr 1fr 1fr;
+  border-top: 1px solid var(--card-border);
+  background-color: var(--card-footer-bg);
+}
+.card-details-col {
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  border-right: 1px solid var(--card-border);
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card-details-col:last-child {
+  border-right: none;
+}
+
+/* ── PREMIUM RED & YELLOW SUB BAR ── */
+.green-sub-bar {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border-bottom: 2px solid #2dd4bf;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.18);
+}
+
+/* ── MOBILE RESPONSIVENESS ── */
+@media (max-width: 767px) {
+  body { padding-bottom: 16px; }
+}
+
+/* ── WORLD CUP TICKER MARQUEE ── */
+.wc-countdown-bar {
+  background: linear-gradient(95deg, #0b0f19 0%, #171337 40%, #0b0f19 80%, #0b0f19 100%);
+  background-size: 200% 200%;
+  animation: gradient-flow 12s ease infinite;
+  border-bottom: 1.5px solid rgba(45, 212, 191, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+#wc-timer {
+  text-shadow: 0 0 12px rgba(45, 212, 191, 0.5);
+  letter-spacing: 0.08em;
+}
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  animation: marquee-roll 48s linear infinite;
+  gap: 36px;
+  padding-left: 16px;
+}
+/* Pause rolling animation on hover for premium user interaction */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+.marquee-content span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+@media (min-width: 768px) {
+  .marquee-content span {
+    font-size: 16px;
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .marquee-content span {
+    font-size: 18px;
+    gap: 12px;
+  }
+}
+@keyframes marquee-roll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

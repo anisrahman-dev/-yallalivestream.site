@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <clipPath id="circle-clip">
+    <circle cx="50" cy="50" r="48"/>
+  </clipPath>
+  <g clip-path="url(#circle-clip)">
+    <rect x="0" y="0" width="100" height="33.3" fill="#078930"/>
+    <rect x="0" y="33.3" width="100" height="33.4" fill="#FCD116"/>
+    <rect x="0" y="66.7" width="100" height="33.3" fill="#C8102E"/>
+    <!-- Blue circle in the center -->
+    <circle cx="50" cy="50" r="20" fill="#0F47AF"/>
+    <!-- Yellow star with rays -->
+    <polygon points="50,36 54,46 64,46 56,52 59,62 50,56 41,62 44,52 36,46 46,46" fill="#FCD116"/>
+    <line x1="50" y1="50" x2="50" y2="33" stroke="#FCD116" stroke-width="1.5"/>
+    <line x1="50" y1="50" x2="64" y2="40" stroke="#FCD116" stroke-width="1.5"/>
+    <line x1="50" y1="50" x2="59" y2="59" stroke="#FCD116" stroke-width="1.5"/>
+    <line x1="50" y1="50" x2="41" y2="59" stroke="#FCD116" stroke-width="1.5"/>
+    <line x1="50" y1="50" x2="36" y2="40" stroke="#FCD116" stroke-width="1.5"/>
+  </g>
+</svg>

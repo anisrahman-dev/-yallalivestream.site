@@ -1,0 +1,14 @@
+*.log
+.DS_Store
+.eslintcache
+.grunt
+.idea/
+.vscode/
+/dist
+/out
+/tmp
+dist/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

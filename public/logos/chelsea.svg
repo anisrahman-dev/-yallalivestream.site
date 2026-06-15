@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <circle cx="50" cy="50" r="48" fill="#034694" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="50" cy="50" r="40" fill="#FFFFFF" stroke="#EE242C" stroke-width="1"/>
+  <circle cx="50" cy="50" r="32" fill="#034694"/>
+  <!-- Lion rampant holding staff -->
+  <path d="M46,35 C46,35 48,32 50,33 C52,34 50,37 48,37 C51,37 53,39 52,42 C51,45 47,46 45,46 C47,48 51,52 53,56 C55,60 54,64 51,65 C48,66 44,63 43,60 C40,56 42,50 44,46 C41,48 38,51 36,49 C34,47 36,43 39,41 C36,41 34,38 37,35 C40,32 43,35 46,38 Z" fill="#EE242C"/>
+  <path d="M52,32 L52,65 M50,32 L54,32" stroke="#F1C40F" stroke-width="2"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    { "source": "/home.html", "destination": "/", "permanent": true },
+    { "source": "/champions-league-final-2026.html", "destination": "/", "permanent": true },
+    { "source": "/how-to-watch-champions-league-free.html", "destination": "/", "permanent": true },
+    { "source": "/how-to-watch-football-mobile.html", "destination": "/", "permanent": true },
+    { "source": "/best-free-football-streaming-sites.html", "destination": "/", "permanent": true },
+    { "source": "/watch-live-football.html", "destination": "/", "permanent": true },
+    { "source": "/tv.html", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/((?!api/|assets/|logos/|.*\\.(?:js|css|png|jpg|jpeg|svg|ico|xml|txt|webp|woff|woff2|ttf)$).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/admin-anis.html", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" } ] },
+    { "source": "/matches-board-anis.html", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" } ] },
+    { "source": "/tv-:num(\\d+)-app.html", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" } ] }
+  ]
+}

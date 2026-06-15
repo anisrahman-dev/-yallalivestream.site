@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <circle cx="50" cy="50" r="48" fill="#007FFF" stroke="#FFFFFF" stroke-width="2"/>
+  <clipPath id="circle-clip">
+    <circle cx="50" cy="50" r="48"/>
+  </clipPath>
+  <g clip-path="url(#circle-clip)">
+    <!-- Diagonal red stripe with yellow borders -->
+    <line x1="-20" y1="120" x2="120" y2="-20" stroke="#FDD017" stroke-width="20"/>
+    <line x1="-20" y1="120" x2="120" y2="-20" stroke="#D21034" stroke-width="12"/>
+    <!-- Yellow star in top-left -->
+    <polygon points="25,12 28,20 37,20 30,25 33,33 25,28 17,33 20,25 13,20 22,20" fill="#FDD017"/>
+  </g>
+</svg>

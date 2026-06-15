@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <clipPath id="circle-clip">
+    <circle cx="50" cy="50" r="48"/>
+  </clipPath>
+  <g clip-path="url(#circle-clip)">
+    <rect x="0" y="0" width="100" height="33.3" fill="#C11B17"/>
+    <rect x="0" y="33.3" width="100" height="33.4" fill="#FFFFFF"/>
+    <rect x="0" y="66.7" width="100" height="33.3" fill="#000000"/>
+    <!-- Golden Eagle in the center -->
+    <path d="M48,42 L52,42 L53,46 L51,56 L49,56 L47,46 Z" fill="#C5A059"/>
+    <path d="M44,44 Q48,46 48,50 L46,55 Z" fill="#C5A059"/>
+    <path d="M56,44 Q52,46 52,50 L54,55 Z" fill="#C5A059"/>
+  </g>
+</svg>
